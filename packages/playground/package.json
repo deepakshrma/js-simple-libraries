@@ -19,10 +19,11 @@
     "test": "echo \"Error: run tests from root\" && exit 1"
   },
   "dependencies": {
+    "@simple/react-from": "*",
     "next": "^8.0.4",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "@simple/react-from": "*"
+    "react-live": "^2.0.1"
   },
   "devDependencies": {
     "@types/next": "^8.0.3",
