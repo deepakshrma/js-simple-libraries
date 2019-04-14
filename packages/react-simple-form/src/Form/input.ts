@@ -4,7 +4,8 @@ interface MetaData {
     dirty: boolean;
     touched: boolean;
 }
-export const useInputField = ({validator = (val: string) => true }) => {
+type InputValidator =  (val: string) => boolean
+export const useInputField = ({validator = (val: string) => true }: { validator: InputValidator}) => {
     const [value, setValue] = React.useState('');
     const [meta, setMeta] = React.useState({
         valid: true,
@@ -14,11 +15,10 @@ export const useInputField = ({validator = (val: string) => true }) => {
     const onChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         let updatedMeta = {
             dirty: true,
-            touched: true
+            touched: true,
+            valid: true
         } as MetaData
-        if(event.target && event.target.value) {
-            updatedMeta.valid = validator(event.target.value)
-        }
+        updatedMeta.valid = validator(event.target.value)
         setMeta(updatedMeta)
         setValue(event.target.value)
     }
