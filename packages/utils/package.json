@@ -1,0 +1,42 @@
+{
+  "name": "@deepakvishwakarma/util",
+  "version": "0.0.3",
+  "description": "Basic util library for nodejs",
+  "author": "xdeepakv <deepak.m.shrma@gmail.com>",
+  "categories": [
+    "Programming Languages"
+  ],
+  "keywords": [
+    "nodejs",
+    "util",
+    "fs",
+    "basic",
+    "library"
+  ],
+  "homepage": "",
+  "license": "ISC",
+  "main": "./dist/utils.js",
+  "module": "./dist/utils.js",
+  "typings": "./dist/utils.d.ts",
+  "private": false,
+  "directories": {
+    "dist": "dist"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "prepublish": "npm run build",
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "prettier": {
+    "semi": false,
+    "singleQuote": true
+  },
+  "devDependencies": {
+    "prettier": "^1.18.2",
+    "tslint-config-prettier": "^1.18.0"
+  },
+  "dependencies": {}
+}
